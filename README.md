@@ -2,6 +2,8 @@
 
 LaTeX template for a PhD thesis at ETH Zurich.
 
+**This template was updated and tested in October 2023. I won't continue updating it. If you have updated it, please feel free to send a PR or to create an issue with a link to your fork and I will add a reference.**
+
 ## Changelog
 
 - Based on [ClassicThesis](https://www.ctan.org/tex-archive/macros/latex/contrib/classicthesis/)
