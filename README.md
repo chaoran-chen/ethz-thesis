@@ -15,6 +15,14 @@ LaTeX template for a PhD thesis at ETH Zurich.
 
 ## Usage
 
+### Overleaf
+
+This was tested with [Overleaf](https://www.overleaf.com/) in October 2023. The logs revealed 0 errors and 9 warnings (which is pretty good for LaTeX?).
+
+### Local compilation
+
+It is unknown when this was last tested and whether it still works.
+
 - Install [TeXLive](https://www.tug.org/texlive/) or [MacTeX](http://www.tug.org/mactex/).
 - Clone this repository.
 - Run `make` from the top level directory to compile.
