@@ -7,7 +7,7 @@
 % classicthesis setup
 \PassOptionsToPackage{%
   %drafting,%
-  %dottedtoc,%
+  dottedtoc,%
   eulerchapternumbers,
   %listings,%
   %parts,%
@@ -42,6 +42,7 @@
 \usepackage{textcomp}
 \usepackage{mparhack}
 \usepackage{relsize}
+\usepackage{booktabs}
 
 % Biblatex
 \input{preamble/biblatex}
@@ -53,7 +54,7 @@
 
 % Math stuff
 \usepackage{amsmath}
-%\usepackage{amssymb}
+\usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{isomath}
 
@@ -73,6 +74,7 @@
 \usepackage{blindtext}
 
 % Hyperref
+\usepackage{xurl}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[%
   hyperfootnotes=false,%
@@ -159,7 +161,7 @@
 %
 
 % Micro-typographic extensions
-%\usepackage[protrusion=true,expansion=true]{microtype}
+% \usepackage[protrusion=true,expansion=true]{microtype}
 
 % Use Minion Pro
 %\usepackage[
@@ -192,7 +194,7 @@
 \usepackage{siunitx}
 \sisetup{
   separate-uncertainty,
-  repeatunits=false,
+  range-units=single,
   detect-family,
   unit-mode=text,
 }
@@ -252,3 +254,11 @@
 \clubpenalty = 10000
 \widowpenalty = 10000
 %\displaywidowpenalty = 10000
+
+% Contains \FloatBarrier command
+\usepackage{placeins}
+
+% Based on https://tex.stackexchange.com/a/127773
+\makeatletter
+\newcommand\Setmaxcitenames[1]{\renewcommand\blx@maxcitenames{#1}}
+\makeatother

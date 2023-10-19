@@ -1,0 +1,39 @@
+\chapter{Example chapter}
+\chaptermark{Example chapter}
+\label{chapter1}
+
+This chapter is published as:
+
+\begin{refsection}[ownpubs]
+  \small
+  \Setmaxcitenames{99}
+  \fullcite{Einstein1905:1}
+\end{refsection}
+
+%
+\begin{refsection}[chapter1]
+\section{Abstract}
+
+The abstract
+
+%
+\section{Introduction}
+
+A lot of  text \cite{Einstein1905:2}
+
+%
+\FloatBarrier
+\section{Declarations}
+%
+\subsection{Code availability}
+
+Links to code repositories
+
+%
+\subsection{Funding}
+
+...
+
+%
+\printbibliography[heading=subbibnumbered, title={Bibliography}]
+\end{refsection}

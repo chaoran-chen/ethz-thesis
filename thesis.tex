@@ -3,7 +3,7 @@
     twoside, openright, titlepage, numbers=noenddot,%
     cleardoublepage=empty,%
     abstractoff,%
-    BCOR=5.5mm, paper=a5, fontsize=10pt,% A5 soft cover
+    BCOR=6.5mm, paper=a5, fontsize=10pt,% A5 soft cover
     %BCOR=5.5mm, paper=17cm:24cm, fontsize=10pt,% 17 cm x 24 cm
     %BCOR=5mm, paper=15.59cm:23.39cm, fontsize=10pt,% Royal soft cover
     %BCOR=0mm, paper=15.24cm:22.86cm, fontsize=10pt,% US-Trade hard cover
@@ -15,9 +15,10 @@
 \usepackage[final]{pdfpages}
 
 % Bibliography
+\addbibresource[label=introduction]{chapters/introduction/main.bib}
+\addbibresource[label=chapter1]{chapters/chapter1/main.bib}
+\addbibresource[label=discussion]{chapters/discussion/main.bib}
 \addbibresource[label=ownpubs]{ownpubs.bib}
-\addbibresource{bibliography.bib}
-\addbibresource{misc.bib}
 
 \begin{document}
 \frenchspacing
@@ -38,10 +39,8 @@
 % Frontmatter
 %
 
-\include{frontbackmatter/dirtytitlepage}
 \include{frontbackmatter/titlepage}
 \include{frontbackmatter/titleback}
-\cleardoublepage\include{frontbackmatter/dedication}
 \cleardoublepage\include{frontbackmatter/abstract}
 \cleardoublepage\include{frontbackmatter/acknowledgments}
 \pagestyle{scrheadings}
@@ -55,22 +54,13 @@
 \include{\dir/main}
 
 \cleardoublepage%
-\def\dir{chapters/sample-chapter}
+\def\dir{chapters/chapter1}
 \include{\dir/main}
-
-% Include some blind text
-\Blinddocument
 
 \cleardoublepage%
-\def\dir{chapters/conclusion_outlook}
+\def\dir{chapters/discussion}
 \include{\dir/main}
 
-\appendix
-\cleardoublepage%
-\def\dir{chapters/appendix}
-\include{\dir/main}
-
-\cleardoublepage\include{frontbackmatter/bibliography}
 
 \bookmarksetup{startatroot}
 %\pagenumbering{gobble}

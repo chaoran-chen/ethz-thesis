@@ -11,7 +11,7 @@
   bibwarn=true, %
   bibencoding=auto, % (ascii, inputenc, <encoding>)
   %--- Sorting --- --- ---
-  sorting=none, % Sort by name, title, year.
+  sorting=none,
   % other options: 
   % nty        Sort by name, title, year.
   % nyt        Sort by name, year, title.
@@ -23,9 +23,8 @@
   % none       Do not sort at all. All entries are processed in citation order.
   % debug      Sort by entry key. This is intended for debugging only.
   %
-  sortcase=true,
-  sortlos=los, % (bib, los) The sorting order of the list of shorthands
-  sortcites=true, % do/do not sort citations according to bib	
+  sortcase=false,
+  sortcites=false, % do/do not sort citations according to bib	
   %--- Dates --- --- ---
   date=comp,  % (short, long, terse, comp, iso8601)
   %	origdate=
@@ -37,11 +36,12 @@
   %--- General Options --- --- ---
   maxnames=3,
   minnames=1,
-  maxbibnames=100, % do not abbreviate names in bibliography
+  maxbibnames=10, % TODO Is there a recommended value?
+  minbibnames=10,
   %	autocite= % (plain, inline, footnote, superscript) 
   autopunct=true,
   language=auto,
-  babel=none, % (none, hyphen, other, other*)
+  autolang=none, % (none, hyphen, other, other*)
   block=none, % (none, space, par, nbpar, ragged)
   notetype=foot+end, % (foot+end, footonly, endonly)
   hyperref=true, % (true, false, auto)
@@ -63,8 +63,8 @@
   %--- Style Options --- --- ---	
   % The following options are provided by the standard styles
   isbn=false,%
-  url=false,%
-  doi=false,%
+  url=true,%
+  doi=true,%
   eprint=false,%	
 }%	
 
